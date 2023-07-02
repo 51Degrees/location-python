@@ -13,7 +13,6 @@ var NAVTREEINDEX0 =
 "classlocation-python_1_1fiftyone__location_1_1location__pipelinebuilder_1_1_location_pipeline_builder.html":[2,0,0,1,0],
 "classlocation-python_1_1fiftyone__location_1_1location__pipelinebuilder_1_1_location_pipeline_builder.html#a61f81e3565a3ef7b9a06a80682d02f2f":[2,0,0,1,0,0],
 "cloud_2gettingstarted_8py-example.html":[3,0],
-"cloud_2web_8py-example.html":[3,1],
 "examples.html":[3],
 "md__home_runner_work_location-python_location-python_common_location-python_readme.html":[1]
 };

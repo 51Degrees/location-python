@@ -25,7 +25,6 @@ var NAVTREE =
 [
     [ "General Docs", "../../documentation/4.4/index.html", null ],
     [ "51Degrees Geo-Location Engines", "md__home_runner_work_location-python_location-python_common_location-python_readme.html", null ],
-    [ "Classes", "annotated.html", "annotated" ],
     [ "Examples", "examples.html", "examples" ]
 ];
 

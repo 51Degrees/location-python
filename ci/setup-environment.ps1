@@ -9,10 +9,9 @@ if ($env:GITHUB_JOB -eq "PreBuild") {
     exit 0
 }
 
-$dependencies = "pylint", "unittest-xml-reporting", "coverage", "certifi", "requests", "cachetools", "chevron", "jsmin", `
-                "fiftyone_pipeline_cloudrequestengine", `
-                "fiftyone_pipeline_core", `
-                "fiftyone_pipeline_engines"
+$dependencies = "tox", "pylint", "unittest-xml-reporting", "coverage", "certifi", "requests", "cachetools", `
+                "chevron", "jsmin", "fiftyone_pipeline_cloudrequestengine", `
+                "fiftyone_pipeline_core", "fiftyone_pipeline_engines"
 
 ./python/setup-environment.ps1 -LanguageVersion $LanguageVersion -Dependencies $dependencies
 

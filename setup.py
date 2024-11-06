@@ -32,22 +32,22 @@ def read(file_name):
         with io.open(
             os.path.join(os.path.dirname(__file__), file_name), encoding="utf-8"
         ) as f:
-            return f.read()
+            return f.read().strip()
     except:
-        return ""
+        return "0.0.0"
 
 setuptools.setup(
     name="fiftyone_location",
 	version=read("version.txt"),
-    author="51Degrees",
-    author_email="support@51degrees.com",
+    author="51Degrees Engineering",
+    author_email="engineering@51degrees.com",
     url="https://51degrees.com/",
-    description=("The 51Degrees Pipeline API is a generic web request intelligence and data processing solution with the ability to add a range of 51Degrees and/or custom plug ins (Engines). "
-    "This repository contains the geo-location engines for the Python implementation of the Pipeline API."),
+    description=("51Degrees Geolocation performs reverse geocoding (using longitude and latitude information) to populate postal addresses."),
     long_description=read("readme.md"),
     long_description_content_type='text/markdown',
-    python_requires='>=3.5',
+    python_requires=">=3.8",
     packages=["fiftyone_location"],
+    package_dir={"": "src"},
     install_requires=["fiftyone_pipeline_core", "fiftyone_pipeline_engines", "fiftyone_pipeline_cloudrequestengine"],
     license="EUPL-1.2",
     classifiers=[

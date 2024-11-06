@@ -21,9 +21,15 @@
 # *********************************************************************
 
 import os
+import sys
 import unittest
+from pathlib import Path
+
 
 class LocationExampleTests(unittest.TestCase):
     def test_cloud_getting_started(self):
-        if "resource_key" in os.environ:    
-            import examples.cloud.gettingstarted
+        if "resource_key" in os.environ:
+            # this is required to import the example code,
+            # since pytest sets sys.path to the test directory
+            sys.path.append(str(Path(__file__).parent.parent.absolute() / "examples"))
+            import cloud.gettingstarted

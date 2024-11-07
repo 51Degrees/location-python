@@ -18,7 +18,7 @@
 # including the attribution notice(s) required under Article 5 of the EUPL
 # in the end user terms of the application under an appropriate heading,
 # such notice(s) shall fulfill the requirements of that article.
-# ********************************************************************* 
+# *********************************************************************
 
 import os
 import unittest
@@ -39,7 +39,7 @@ else:
 pipeline = LocationPipelineBuilder(resource_key = resource_key, location_provider =  "fiftyonedegrees").build()
 
 location_engine = pipeline.get_element("location")
-flowData = pipeline.create_flowdata();    
+flowData = pipeline.create_flowdata();
 flowData.evidence.add('query.51D_Pos_latitude', location_LAT);
 flowData.evidence.add('query.51D_Pos_longitude', location_LON);
 flowData.process()
@@ -49,7 +49,7 @@ class PropertyTests(unittest.TestCase):
     def test_available_properties_fiftyonedegrees(self):
 
         """!
-        Tests value types of the properties present present in the engine 
+        Tests value types of the properties present present in the engine
         """
 
         location = flowData.get(location_engine.datakey)
@@ -67,7 +67,7 @@ class PropertyTests(unittest.TestCase):
                 self.assertIsNotNone(property + ".noValueMessage should not be null", dd_property_value.no_value_message())
 
     def test_value_types_fiftyonedegrees(self):
-    
+
         """!
         Tests whether the all the properties present in the engine when initialised with a resource key are accessible.
         """
@@ -85,8 +85,8 @@ class PropertyTests(unittest.TestCase):
 
             # Flowdata properties
             dd_property_value = location[property]
-            if dd_property_value.has_value():               
+            if dd_property_value.has_value():
                 self.assertIsNotNone("Property: " + property +" is not present in the results.", dd_property_value)
                 value = dd_property_value.value()
-                self.assertTrue("Expected type for " + property + " is " + expected_type + 
+                self.assertTrue("Expected type for " + property + " is " + expected_type +
                 " but actual type is " + get_value_type(value), is_same_type(value, expected_type))

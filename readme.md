@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repo has been merged into the monorepo https://github.com/51Degrees/51degrees-python, folder [`location/`](https://github.com/51Degrees/51degrees-python/tree/main/location). Please refer to the new monorepository for issues and PRs.
+
 # 51Degrees Geo-Location Engines
 
 ![51Degrees](https://51degrees.com/img/logo.png?utm_source=github&utm_medium=readme&utm_campaign=location-python&utm_content=readme.md&utm_term=51degrees-geo-location-engines) 
